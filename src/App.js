@@ -1,24 +1,28 @@
+import { useState } from 'react';
 import './App.css';
-import Button from './components/Button';
-import Display from './components/Display';
 import { GiScissors, GiPaper, GiRock } from 'react-icons/gi';
 
 function App() {
+  const [value, setValue] = useState('');
+
   return (
     <div className="App">
-      <Display>You:</Display>
-      <Display>Computer:</Display>
-      <Display>Winner:</Display>
-      <section className="button-area">
-        <Button>
-          ROCK <GiRock size={22} />
-        </Button>
-        <Button>
-          PAPER <GiPaper size={22} />
-        </Button>
-        <Button>
-          SCISSORS <GiScissors size={25} />
-        </Button>
+      <section>
+        <p>You:{value}</p>
+        <p>Computer:</p>
+        <p>Winner:</p>
+      </section>
+      <section>
+        <button onClick={() => setValue(' ROCK')}>
+          ROCK <GiRock />
+        </button>
+        <button onClick={() => setValue(' PAPER')}>
+          PAPER <GiPaper />
+        </button>
+        <button onClick={() => setValue(' SCISSORS')}>
+          SCISSORS
+          <GiScissors />
+        </button>
       </section>
     </div>
   );
