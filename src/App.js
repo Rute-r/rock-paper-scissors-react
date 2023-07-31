@@ -7,12 +7,12 @@ function App() {
 
   return (
     <div className="App">
-      <section>
+      <section className="diplay-area">
         <p>You:{value}</p>
-        <p>Computer:</p>
-        <p>Winner:</p>
+        <p>Computer:{}</p>
+        <p>Winner:{}</p>
       </section>
-      <section>
+      <section className="button-area">
         <button onClick={() => setValue(' ROCK')}>
           ROCK <GiRock />
         </button>
